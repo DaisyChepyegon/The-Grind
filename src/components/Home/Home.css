@@ -1,0 +1,18 @@
+.Home{
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.Homeimage{
+  display: flex;
+  flex-direction: column;
+}
+.text{
+  text-align: center;
+  margin: 30px 0px;
+  color: rgb(189, 95, 226);
+  font-family: 'Times New Roman', Times, serif;
+
+}
