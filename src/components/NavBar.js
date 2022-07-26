@@ -6,7 +6,7 @@ const linkStyles = {
   width: "50px",
   padding: "12px",
   margin: "0 6px 6px",
-  background: "blue",
+  background: "red",
   textDecoration: "none",
   color: "white",
 };
@@ -34,7 +34,7 @@ function NavBar() {
       >
         About
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/login"
         exact
         style={linkStyles}
@@ -43,7 +43,7 @@ function NavBar() {
         }}
       >
         Login
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 }
