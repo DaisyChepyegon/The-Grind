@@ -25,13 +25,13 @@ body {
 }
 
 .nav {
-  background-color: #333;
+  background-color: rgb(190, 137, 226);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0rem 1.5rem;
   margin: 0rem 1rem;
 }
 
@@ -57,10 +57,10 @@ body {
 }
 
 .nav li.active {
-  background-color: #555;
+  background-color: rgb(93, 56, 102);
 }
 
 .nav li:hover {
-  background-color: #777;
+  background-color: rgb(181, 12, 223);
 }
 
