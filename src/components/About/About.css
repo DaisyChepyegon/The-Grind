@@ -6,7 +6,7 @@
 .left h1{
   background-color: rgb(193, 172, 212);
   width: 300px;
-  
+  font-style: italic;
 }
 .right{
   margin-top: 80px;
@@ -14,16 +14,27 @@
   margin-right: 70px;
   
 }
-.right button{
+.readmore{
   background-color: rgb(172, 144, 199);
-  font-size: 16px;
+  font-size: 20px;
   width: 120px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 30px;
-  margin-left: 450px;
+  margin-left: 400px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .right li{
   list-style: none;
   font-size: 16px;
   padding: 10px;
+}
+span{
+  margin-top: 200px;
+  background-color: rgb(193, 172, 212);
+  width: 150px;
+  border-radius: 3px;
+  font-style: italic;
 }
