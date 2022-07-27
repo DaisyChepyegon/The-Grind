@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0rem 1.5rem;
+  padding: 0rem 1.0rem;
   margin: 0rem 1rem;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .nav li.active {
-  background-color: rgb(93, 56, 102);
+  background-color: rgb(145, 87, 160);
 }
 
 .nav li:hover {

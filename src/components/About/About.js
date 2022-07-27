@@ -37,8 +37,8 @@ function About() {
       <img src={about0} alt='About0' height={550} width={500} />
       </div>
       <div className='right'>
-      <h1>The Grind</h1>
-      <h3>Store Hours</h3>
+      <h1>The Grind Coffee House</h1>
+      <h3><hr/>Store Hours</h3>
       <ul>
         <li>Monday - Thursday 7am - 9pm</li>
         <li>Friday 7am - 10pm</li>
