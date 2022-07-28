@@ -34,7 +34,7 @@ function About() {
     
       <div className='left'>
       <h1>About US</h1>
-      <img src={about0} alt='About0' height={550} width={500} />
+      <img src={about0} alt='About0' height={550} width={550} />
       </div>
       <div className='right'>
       <h1>The Grind Coffee House</h1>

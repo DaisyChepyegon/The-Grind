@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './Contact.css'
+import home from './Home.jpg'
 
 function Contact() {
 
@@ -28,8 +29,16 @@ function Contact() {
 
 
   return (
+    <>
     <div className='contact'>
+
+    <div>
+     <img src={home} alt="image0" height={550} width={500}/>
+    </div>
+    <div>
+      
       <form  onSubmit={handleSubmit} className="info">
+      v
       <input 
        name="name"
        type="text"
@@ -64,6 +73,13 @@ function Contact() {
       <input className='btn' type="submit" value="Send" />
     </form>
     </div>
+    </div>
+
+    <div className="Map" id="Map">
+            <iframe title="MapLink" className="MapLink" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19442.651250298743!2d13.321824!3d52.473135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7177f67d9c0767b4!2swild+caff%C3%A8!5e0!3m2!1sde!2sus!4v1543937031005" allowFullScreen></iframe>
+    </div>
+   
+</>
   )
 }
 

@@ -1,12 +1,15 @@
 .contact{
   background-color: rgb(238, 230, 248);
-  
+  display: flex;
+  flex-direction: row;
 }
 form{
   display: flex;
   flex-direction: column;
   width: 500px;
-  margin-left: 50px;
+  margin-left: 150px;
+  margin-top: 50px;
+
 
 }
 input{
@@ -24,5 +27,18 @@ textarea{
 .btn{
   width: 150px;
   font-size: 20px;
-  background-color: rgb(127, 99, 153);
+  background-color: rgb(193, 172, 212);
+  margin-left: 350px;
+  margin-top: 50px;
+}
+.Map{
+  height: 40vh;
+  background-color: white;
+  
+}
+
+.MapLink{
+  border: none;
+  height: 40vh;
+  width: 100%;
 }
