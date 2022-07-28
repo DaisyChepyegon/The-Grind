@@ -7,8 +7,8 @@ export default function Navbar() {
         Home
       </Link>
       <ul>
-        {/* <CustomLink to="/pricing">Pricing</CustomLink> */}
         <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/contact">ContactUs</CustomLink>
       </ul>
     </nav>
   )

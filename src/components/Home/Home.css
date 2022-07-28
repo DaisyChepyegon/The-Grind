@@ -17,3 +17,24 @@
   font-family: Arial, Helvetica, sans-serif;
 
 }
+.slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+  overflow: scroll;
+}
+.slideshow{
+  position: relative;
+}
+.mainImg{
+  transition: all 500ms;
+}
+.actions{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

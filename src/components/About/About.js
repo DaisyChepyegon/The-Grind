@@ -45,6 +45,8 @@ function About() {
         <li>Saturday 8am - 10pm</li>
       </ul>
       <div>
+      <hr />
+      <h3>Description</h3>
       <Readmore maxCharacterCount={190}>
         The Grind Coffee House offers a unique coffee house environment.
         We are not only a place to drop in and get your morning cup of coffee
