@@ -1,16 +1,24 @@
-.lgn{
+.reg{
   background-color: rgb(238, 230, 248);
+}
+.signup{
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
-.log{
+.imgs{
+  margin: 0px;
+  padding: 0px;
+}
+.sign{
  
   padding: 1em;
   display: flex;
   flex-direction: column;
 
 }
-.log input{
+.sign input{
   border: solid black 1px;
   font-size: 1em;
   font-family: sans-serif;
@@ -25,8 +33,4 @@ button{
   margin-left: 280px;
   background-color: rgb(193, 172, 212);
   border-radius: 5px;
-}
-.login{
-  margin-top: 100px;
-  margin-left: 50px;
 }

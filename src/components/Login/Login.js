@@ -1,28 +1,52 @@
-import { useRef, useState, useEffect } from "react"
+import axios from "axios";
+import React,{ Component } from "react";
+import "./Login.css"
+import home from "./Home.jpg"
 
 
-function Login() {
-  const userRef= useRef();
-  const errRef = useRef();
+export default class Login extends Component {
 
-  const [user, setUser] =useState('');
-  const [password, setPassword] =useState('');
-  const [errMsg, setErrMsg] =useState('');
-  const [success, setSuccess] =useState(false)
+  handleSubmit = e => {
+    e.preventDefault();
 
-  useEffect(() =>{
-    userRef.current.focus();
-  },[])
+    const data ={
+      email: this.email,
+      password: this.password,
+    }
+    axios.post("http://localhost:8000/register", data)
+    .then(resp => {
+      console.log(resp)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
-  useEffect(() =>{
-    setErrMsg('');
-  },[user, password])
+  render(){
 
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <div className="lgn">
 
-export default Login
+      <div className="img">
+        <img src={home} alt="image0" height={550} width={500}/>
+      </div>
+      
+      <div className="login">
+      <h1>Login</h1>
+       <form onSubmit={this.handleSubmit} className="log">
+        <label>Email </label>
+        <input type="email" placeholder="Email"
+          onChange={e => this.email = e.target.value}
+        />
+        <label>Password</label>
+        <input type="password" placeholder="Password"
+          onChange={e => this.password = e.target.value}
+         />
+      
+        <button>Login</button>
+        </form>
+      </div>
+    </div>
+  );
+  }
+}
