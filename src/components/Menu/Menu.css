@@ -23,6 +23,10 @@
 }
 .pastries{
   border-left: 2px solid gray;
-  margin-right: 100px;
+  margin-right: 80px;
+  margin-left: 50px;
  
+}
+.coffee{
+  margin-right: 100px;
 }
