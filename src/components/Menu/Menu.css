@@ -16,6 +16,15 @@
   gap: 10rem;
   background-color: rgb(238, 230, 248);
 }
+.menus h1{
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.menus h2{
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-bottom: 0.5px dashed gray;
+}
 .bestseller{
   display:flex;
   flex-direction: row;
@@ -24,7 +33,7 @@
 .pastries{
   border-left: 2px solid gray;
   margin-right: 80px;
-  margin-left: 50px;
+
  
 }
 .coffee{
