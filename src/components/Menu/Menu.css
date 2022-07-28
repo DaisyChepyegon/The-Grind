@@ -1,0 +1,13 @@
+.slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: scroll;
+  gap: 1rem;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+}
