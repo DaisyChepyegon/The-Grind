@@ -25,10 +25,12 @@ function Menu() {
     <div className='menus'>
 
     <div className='menu'>
+
     <div className='ourmenu'>
-      <th>Our Menu</th>
-      <tr>Coffee</tr>
-      <tr>None-Coffee Drinks</tr>
+      <h2>Our Menu</h2>
+
+    
+
     </div>
     <div className='best'>
     <h1>Our Bestsellers</h1>
