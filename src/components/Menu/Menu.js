@@ -28,7 +28,11 @@ function Menu() {
 
     <div className='ourmenu'>
       <h2>Our Menu</h2>
-
+      <ul>
+        <li>Coffee</li>
+        <li>Non-Coffee</li>
+        <li>Snacks</li>
+      </ul>
     
 
     </div>

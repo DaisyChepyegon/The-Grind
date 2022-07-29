@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
@@ -12,6 +12,22 @@ import axios from "axios"
 
 function App() {
   const [menus, setMenus] =useState([])
+  const url="https://the-grind-api.herokuapp.com/menu"
+
+  const fetchData = () =>{
+    axios.get(url)
+    .then((resp => {
+      setMenus(resp.data)
+      
+    }))
+  }
+
+  useEffect(() => {
+    fetchData()
+  },[])
+
+  console.log(menus)
+
   return (
     <>
       <NavBar />
@@ -20,7 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu menus={menus} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 

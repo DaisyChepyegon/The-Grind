@@ -38,7 +38,7 @@ function Contact() {
     <div>
       
       <form  onSubmit={handleSubmit} className="info">
-      v
+      <h2>Contact Us</h2>
       <input 
        name="name"
        type="text"
