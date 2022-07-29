@@ -18,7 +18,7 @@ function App() {
     axios.get(url)
     .then((resp => {
       setMenus(resp.data)
-      
+      console.log(resp.data)
     }))
   }
 
@@ -36,7 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu menus={menus} />} />
+          <Route path="/menu" element={<Menu  />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 

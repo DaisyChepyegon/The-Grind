@@ -20,7 +20,7 @@ import slides4 from './Menuimages/slides4.jpg'
 import pastry1 from './Menuimages/pastry1.jpg'
 import pastry2 from './Menuimages/pastry2.jpg'
 
-function Menu() {
+function Menu({name}) {
   return (
     <div className='menus'>
 
@@ -29,9 +29,8 @@ function Menu() {
     <div className='ourmenu'>
       <h2>Our Menu</h2>
       <ul>
-        <li>Coffee</li>
-        <li>Non-Coffee</li>
-        <li>Snacks</li>
+        <li>{name}</li>
+        
       </ul>
     
 
