@@ -8,14 +8,20 @@ import home from "./Home.jpg"
    const [email, setEmail] =useState("")
    const [password, setPassword] =useState("")
 
-  function handleSubmit(){
+  async function handleSubmit(){
     let item={name,password,email}
     console.warn(item)
 
-    fetch("http://localhost:3000/users",{
+    let result= await fetch("http://localhost:3000/users",{
       method:"POST",
       body:JSON.stringify(item),
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"applicaion/json"
+      }
     })
+    result= await result.json()
+    console.log("result",result)
   }
 
   return (

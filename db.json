@@ -1,16 +1,22 @@
 {
-  "users":[
-  {
-    "id":0,
-    "username":"daisy",
-    "password":"12345",
-    "email":"daisy@daisy"
-  },
-  {
-    "id":1,
-    "username":"dee",
-    "password":"1234",
-    "email":"dee@dee"
-  }
-]
+  "users": [
+    {
+      "id": 0,
+      "username": "daisy",
+      "password": "12345",
+      "email": "daisy@daisy"
+    },
+    {
+      "id": 1,
+      "username": "dee",
+      "password": "1234",
+      "email": "dee@dee"
+    },
+    {
+      "name": "deee",
+      "password": "123",
+      "email": "deee@deee",
+      "id": 2
+    }
+  ]
 }
