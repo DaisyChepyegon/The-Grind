@@ -1,30 +1,39 @@
-import React,{useState, useEffect} from "react";
-import axios from "axios";
+import React,{useState} from "react";
+import {useNavigate} from "react-router-dom"
 import "./Login.css"
 import home from "./Home.jpg"
 
 
- function Login () {
-  const [email, setEmail] =useState("")
-  const [password, setPassword] =useState("")
-  
-  function handleSubmit(){
-    let item={email,password}
-    console.log(item)
- 
+ function Login ({onLogin}) {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   }
 
-  const fetchData = () =>{
-    axios.get("http://localhost:3000/users")
-    .then((resp => {
-      setEmail(resp.item)
-      console.log(resp.item)
-    }))
+  function handleSubmit(event) {
+    event.preventDefault();
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((resp) => resp.json())
+      .then((user) => {
+        onLogin(user);
+        // after logging the user in, redirect to the home page!
+        navigate('/Home')
+      });
   }
-
-  useEffect(() => {
-    fetchData()
-  },[])
 
   return (
     <div className="lgn">
@@ -38,11 +47,11 @@ import home from "./Home.jpg"
        <form className="log">
         <label>Email </label>
         <input type="email" placeholder="Email"
-        onChange={e => setEmail( e.target.value)}
+        onChange={handleChange}
         />
         <label>Password</label>
         <input type="password" placeholder="Password"
-        onChange={e => setPassword( e.target.value)}
+        onChange={handleChange}
          />
       
         <button onClick={handleSubmit}>Login</button>

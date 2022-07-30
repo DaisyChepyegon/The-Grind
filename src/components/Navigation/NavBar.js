@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  function handleClick({onLogout}) {
+    onLogout();
+    navigate("/login");
+  }
+
   return (
     <nav className="nav">
         <NavLink to="/" >Home </NavLink>
@@ -10,6 +18,8 @@ export default function Navbar() {
         <NavLink to="/contact">ContactUs</NavLink>
         <NavLink to="/login">Log In</NavLink>
         <NavLink to="/register">Sign Up</NavLink>
+
+      <button onClick={handleClick}>Logout</button>
 
     </nav>
   )

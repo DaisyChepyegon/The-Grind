@@ -1,4 +1,5 @@
 import React from 'react';
+import {Navigate} from "react-router-dom"
 import home from './Homeimages/Home.jpg';
 import home1 from './Homeimages/Home1.jpg';
 
@@ -6,43 +7,10 @@ import home1 from './Homeimages/Home1.jpg';
 
 import './Home.css';
 
-// function Slideshow({imgs}){
-//   const [index, setIndex] =useState(0)
+function Home({LoggedIn}) {
+ if (!LoggedIn)
+  return <Navigate to="/Login"/>
 
-//   useEffect(() => {
-//     setIndex(0)
-//   },[])
-
-//   function next(){
-//     if(index === imgs.length -1){
-//       setIndex(0)
-//     }else{
-//       setIndex(index+1)
-//     }
-//   }
-
-//   function previous(){
-//     if(index === 0 ){
-//       setIndex(imgs.length -1)
-//     }else{
-//       setIndex(index-1)
-//     }
-//   }
-
-//   return(
-//     <div className='slideshow'>
-//       <img className='mainImg' src={imgs[index]}/>
-//       <div classname='actions'>
-//         <button onClick={previous}>Prev</button>
-//         <button onClick={next}>Next</button>
-//       </div>
-
-//     </div>
-//   )
-// }
-
-function Home() {
- 
   return (
     <div>
     <div className='Home'>

@@ -13,6 +13,7 @@ import axios from "axios"
 
 function App() {
   const [menus, setMenus] =useState([])
+  const [LoggedIn, setLoggedIn] = useState(false);
   const url="https://the-grind-api.herokuapp.com/menu"
 
   const fetchData = () =>{
@@ -31,16 +32,16 @@ function App() {
 
   return (
     <>
-      <NavBar />
+      <NavBar setLoggedIn={setLoggedIn} />
       
       <div className="container">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home LoggedIn={LoggedIn}/>} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/favorites" element={<Favorites />} />
           <Route exact path="/menu" element={<Menu menus={menus} />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/login" element={<Login setLoggedIn={setLoggedIn}/>} />
           <Route exact path="/register" element={<Register />} />
 
         </Routes>
