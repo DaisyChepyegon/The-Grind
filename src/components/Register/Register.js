@@ -1,35 +1,22 @@
-import axios from "axios";
-import React,{ Component } from "react";
+import React,{useState} from "react";
 import "./Register.css"
 import home from "./Home.jpg"
 
 
-export default class Register extends Component {
+ function Register() {
+   const [name, setName] =useState("")
+   const [email, setEmail] =useState("")
+   const [password, setPassword] =useState("")
 
-   handleSubmit = (event) =>{
-    event.preventDefault()
-    
-    const data ={
-      first_name: this.firstName,
-      last_name: this.lastName,
-      email: this.email,
-      password: this.password,
-      password_confirm: this.confirmPassword,
-    }
-    console.log(data)
+  function handleSubmit(){
+    let item={name,password,email}
+    console.warn(item)
 
-    axios.post("http://localhost:8000/register",data)
-    .then(resp => {
-      console.log(resp)
+    fetch("http://localhost:3000/users",{
+      method:"POST",
+      body:JSON.stringify(item),
     })
-    .catch(err => {
-      console.log(err)
-    })
-
-
   }
-
-  render(){
 
   return (
     <div className="reg">
@@ -40,34 +27,31 @@ export default class Register extends Component {
       </div>
       <div className="frm">
       <h1>Sign Up</h1>
-      <form onSubmit={this.handleSubmit} className="sign">
-        <label>First Name</label>
-        <input type="text" placeholder="First Name" 
-          onChange={e => this.firstName = e.target.value}
-        />
-        <label>Last Name</label>
-        <input type="text" placeholder="Last Name" 
-          onChange={e => this.lastName = e.target.value}
+      <form className="sign">
+        
+        <label> Name</label>
+        <input type="text" placeholder="Name" 
+          value={name}
+          onChange={e => setName ( e.target.value)}
         />
         <label>Email </label>
         <input type="email" placeholder="Email"
-          onChange={e => this.email = e.target.value}
+          value={email}
+          onChange={e => setEmail( e.target.value)}
         />
         <label>Password</label>
         <input type="password" placeholder="Password"
-          onChange={e => this.password = e.target.value}
+          value={password}
+           onChange={e => setPassword( e.target.value)}
          />
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" 
-          onChange={e => this.confirmPassword = e.target.value}
-        />
-        <button>Sign Up</button>
+        <button onClick={handleSubmit}>Sign Up</button>
         </form>
         </div>
       </div>
     </div>
   );
-  }
+  
 }
+export default Register
 
 

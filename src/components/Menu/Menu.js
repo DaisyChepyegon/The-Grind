@@ -4,6 +4,8 @@ import List from "../List";
 import BestSellers from "../BestSellers";
 import Pictures from "../Pictures";
 
+
+
 function Menu({menus}) {
 
   return (
