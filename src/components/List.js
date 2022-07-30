@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaRegHeart } from "react-icons/fa";
 
 function List({name}) {
   return (
@@ -6,7 +7,8 @@ function List({name}) {
     
     <ul>
       {name}
-      <button>Add </button>
+      <br />
+      <FaRegHeart />
     </ul>
     </>
 
