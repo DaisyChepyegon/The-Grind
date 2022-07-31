@@ -2,6 +2,8 @@ import React,{useState, useEffect} from 'react'
 import axios from 'axios'
 import CommentContainer from './CommentContainer'
 import CommentsForm from './CommentsForm'
+import home from './Home.jpg'
+import "./Comment.css"
 
 function CommentDisplay() {
   const [comments, setComments] =useState([])
@@ -11,7 +13,7 @@ function CommentDisplay() {
     axios.get("http://localhost:3000/comments")
     .then((resp => {
       setComments(resp.data)
-      console.log(resp.data)
+      // console.log(resp.data)
     }))
   }
 
@@ -46,13 +48,19 @@ function CommentDisplay() {
   },[])
 
   return (
+    <div className='contact'>
+    <div>
+      <img src={home} alt="image0" height={550} width={500}/>
+    </div>
     <div>
       <CommentsForm addcomment={addcomment} />
+    
       <CommentContainer 
           comments={comments}
           deleteComment={deleteComment}
           updateComment={updateComment}
       />
+      </div>
     </div>
   )
 }

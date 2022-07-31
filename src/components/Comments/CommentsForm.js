@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
-import './Contact.css'
-import home from './Home.jpg'
+
 
 function CommentsForm({addcomment}) {
 
@@ -29,16 +28,10 @@ function CommentsForm({addcomment}) {
 
 
   return (
-    <>
-    <div className='contact'>
-
-    <div>
-     <img src={home} alt="image0" height={550} width={500}/>
-    </div>
-    <div>
+   
       
       <form  onSubmit={handleSubmit} className="info">
-      <h2>Contact Us</h2>
+      <h2>Comments Section</h2>
       <input 
        name="name"
        type="text"
@@ -56,11 +49,7 @@ function CommentsForm({addcomment}) {
        />
       <input className='btn' type="submit" value="Send" />
     </form>
-    </div>
-    </div>
-
-   
-</>
+    
   )
 }
 

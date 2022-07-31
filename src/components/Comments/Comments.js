@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Comments({name, comment, key, updateComment, deleteComment}) {
+function Comments({name, comment, id, updateComment, deleteComment}) {
+  
+  console.log()
   return (
     <div>
       <h3>{name}</h3>
       <p>{comment}</p>
-      <botton onClick={() => {deleteComment(key)}}>Delete</botton>
+      <button onClick={() => {deleteComment(id)}}>Delete</button>
     </div>
   )
 }

@@ -1,14 +1,16 @@
 import React from 'react'
-import Comments from './CommentsForm'
+import Comments from './Comments'
 
 function CommentContainer({comments, updateComment, deleteComment}) {
+  console.log(comments)
   return (
     <div className='cont'>
-      {comments.map((comment) =>(
+      {comments.map((item) =>(
         <Comments 
-        key={comment.id}
-        name={comment.name}
-        comment={comment.comment}
+        key={item.id}
+        id={item.id}
+        name={item.name}
+        comment={item.comment}
         updateComment={updateComment}
         deleteComment={deleteComment}
         />
