@@ -8,7 +8,7 @@ form{
   flex-direction: column;
   width: 500px;
   margin-left: 150px;
-  margin-top: 50px;
+  margin-top: 20px;
 
 
 }
@@ -29,16 +29,26 @@ textarea{
   font-size: 20px;
   background-color: rgb(193, 172, 212);
   margin-left: 350px;
-  margin-top: 50px;
+  margin-top: 15px;
 }
-.Map{
-  height: 40vh;
-  background-color: white;
-  
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
 }
-
-.MapLink{
-  border: none;
-  height: 40vh;
-  width: 100%;
+.delete{
+  padding: 2px;
+  margin: 2px;
+  height: 30px;
+  width: 100px;
+}
+.comment{
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  border-bottom: 0.5px solid grey;
 }

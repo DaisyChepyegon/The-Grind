@@ -4,10 +4,13 @@ function Comments({name, comment, id, updateComment, deleteComment}) {
   
   console.log()
   return (
-    <div>
+    <div className='flex'>
+      <div className='comment'>
       <h3>{name}</h3>
       <p>{comment}</p>
-      <button onClick={() => {deleteComment(id)}}>Delete</button>
+      </div>
+      
+      <button className='delete' onClick={() => {deleteComment(id)}}>Delete</button>
     </div>
   )
 }

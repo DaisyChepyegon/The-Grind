@@ -6,7 +6,7 @@ import home1 from './Homeimages/Home1.jpg';
 
 
 import './Home.css';
-
+//navigate to home after login
 function Home({LoggedIn}) {
  if (!LoggedIn)
   return <Navigate to="/Login"/>

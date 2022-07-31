@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom"
 
 export default function Navbar({setLoggedIn}) {
   const navigate = useNavigate();
-
+//navigate back to login after logout 
   function handleClick() {
     setLoggedIn(false);
     navigate("/login");

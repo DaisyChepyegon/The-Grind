@@ -50,7 +50,7 @@ function CommentDisplay() {
   return (
     <div className='contact'>
     <div>
-      <img src={home} alt="image0" height={550} width={500}/>
+      <img src={home} alt="image0" height={750} width={600}/>
     </div>
     <div>
       <CommentsForm addcomment={addcomment} />

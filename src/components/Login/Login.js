@@ -10,7 +10,7 @@ import home from "./Home.jpg"
   const [email, setEmail] =useState("")
   const [password, setPassword] =useState("")
   const navigate = useNavigate();
-
+    //authentinticate users
   const [account, setAccount] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("acc");

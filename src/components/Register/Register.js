@@ -15,7 +15,7 @@ import home from "./Home.jpg"
     password:""
    })
 
-
+// save user data to the local storage
  function handleSubmit(e){
   e.preventDefault()
   setFormData( {

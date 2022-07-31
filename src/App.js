@@ -15,6 +15,7 @@ function App() {
   const [LoggedIn, setLoggedIn] = useState(false);
   const url="https://the-grind-api.herokuapp.com/menu"
 
+  //fetch data from api
   const fetchData = () =>{
     axios.get(url)
     .then((resp => {
