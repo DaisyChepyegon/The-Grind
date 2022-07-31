@@ -10,14 +10,23 @@ Daisy Chepyegon
 
 ## Screenshot
 
-### LOGIN PAGE
+### HOME PAGE
+![image](./src/images/Home.png)
+
+### MENU PAGE
+![image](./src/images/menu.png)
+
+### ABOUT PAGE
+![image](./src/images/about.png)
+
+### COMMENTS PAGE
 ![image](./assets/images/login.png)
 
-### REGISTER PAGE
-![image](./assets/images/register.png)
+### LOGIN PAGE
+![image](./src/images/login.png)
 
-### MAIN PAGE
-![image](./assets/images/main.png)
+### SIGNUP PAGE
+![image](./src/images/signup.png)
 
 
 # Table of Content
