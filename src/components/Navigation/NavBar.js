@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom"
 import {useNavigate} from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar({setLoggedIn}) {
   const navigate = useNavigate();
 
-  function handleClick({onLogout}) {
-    onLogout();
+  function handleClick() {
+    setLoggedIn(false);
     navigate("/login");
   }
 
@@ -19,7 +19,7 @@ export default function Navbar() {
         <NavLink to="/login">Log In</NavLink>
         <NavLink to="/register">Sign Up</NavLink>
 
-      <button onClick={handleClick}>Logout</button>
+      <p onClick={handleClick}>Logout</p>
 
     </nav>
   )

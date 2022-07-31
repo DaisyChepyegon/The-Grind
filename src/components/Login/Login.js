@@ -1,38 +1,38 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom"
 import "./Login.css"
 import home from "./Home.jpg"
 
 
- function Login ({onLogin}) {
+
+
+  function Login (setLoggedIn) {
+  const [email, setEmail] =useState("")
+  const [password, setPassword] =useState("")
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
 
-  function handleChange(event) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  }
-
+  useEffect(() => {
+    if(localStorage.getItem("user-info")){
+      navigate("/home")
+    }
+  },[])
+  
+ 
   function handleSubmit(event) {
+    let item={password,email}
+
     event.preventDefault();
-    fetch("http://localhost:3000/users", {
+    let result = fetch("http://localhost:3000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(item),
     })
-      .then((resp) => resp.json())
-      .then((user) => {
-        onLogin(user);
-        // after logging the user in, redirect to the home page!
-        navigate('/Home')
-      });
+    setLoggedIn(true)
+    navigate("/home")
+
+      localStorage.setItem("user-info",JSON.stringify(result))
   }
 
   return (
@@ -47,11 +47,11 @@ import home from "./Home.jpg"
        <form className="log">
         <label>Email </label>
         <input type="email" placeholder="Email"
-        onChange={handleChange}
+        onChange={e => setEmail( e.target.value)}
         />
         <label>Password</label>
         <input type="password" placeholder="Password"
-        onChange={handleChange}
+        onChange={e => setPassword( e.target.value)}
          />
       
         <button onClick={handleSubmit}>Login</button>
