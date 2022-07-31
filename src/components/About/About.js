@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './About.css'
+import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa'
 import about0 from './Aboutimages/joanna-kosinska-B43a-FPxYqU-unsplash.jpg'
 
 
@@ -34,7 +35,7 @@ function About() {
     
       <div className='left'>
       <h1>About US</h1>
-      <img src={about0} alt='About0' height={550} width={550} />
+      <img src={about0} alt='About0' height={700} width={600} />
       </div>
       <div className='right'>
       <h1>The Grind Coffee House</h1>
@@ -59,7 +60,14 @@ function About() {
         All of our sauces & syrups are made in-house with all natural ingredients ensuring you the highest quality in taste & health.
         You can complete your coffee with one of our delicious sweet treats made by our very own baker.
         We look forward to serving you at The Grind Coffee House!
+
       </Readmore>
+
+      <h3>Phone: 0712345678</h3>
+        <h3>Email: thegrind@gmail.com</h3>
+        <h3><FaInstagram /> @Instagram</h3>
+        <h3><FaFacebook /> @Facebook</h3>
+        <h3><FaTwitter /> @Twitter</h3>
       </div>
       
      

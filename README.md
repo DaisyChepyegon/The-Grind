@@ -17,10 +17,10 @@ Daisy Chepyegon
 ![image](./src/images/menu.png)
 
 ### ABOUT PAGE
-![image](./src/images/about.png)
+![image](./src/images/About.png)
 
 ### COMMENTS PAGE
-![image](./assets/images/login.png)
+![image](./src/images/comments.png)
 
 ### LOGIN PAGE
 ![image](./src/images/login.png)
