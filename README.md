@@ -30,17 +30,21 @@ Daisy Chepyegon
 
 
 # Table of Content
-*[Technologies]
++ [Technologies](#Technologies)
 
-*[description]
++ [description](#description)
 
-*[features]
++ [features](#features)
 
-*[project-setup]
++ [project-setup](#project-setup-instuctions)
 
-*[project-usage]
+ + [project-usage](#clone-repo)
 
-*[licence]
+ + [contribution](#contributing-to-the-project)
+
+ + [live link](#live-link)
+
++ [licence](#licence)
 
 # Technologies
 
