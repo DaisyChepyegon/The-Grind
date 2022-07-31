@@ -16,7 +16,7 @@ export default function Navbar({setLoggedIn}) {
         <NavLink to="/menu">Menu</NavLink>
         <NavLink to="/favorites">Favorites</NavLink>
         <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/contact">ContactUs</NavLink>
+        <NavLink to="/comment">Comments</NavLink>
         <NavLink to="/login">Log In</NavLink>
         <NavLink to="/register">Sign Up</NavLink>
 

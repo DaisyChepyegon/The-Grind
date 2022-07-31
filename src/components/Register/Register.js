@@ -26,6 +26,7 @@ import home from "./Home.jpg"
   setAcc(formData)
   console.log(formData)   
   localStorage.setItem("acc", JSON.stringify(formData));
+  alert("Sign Up successfull")
 
   }
 

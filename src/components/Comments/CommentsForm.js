@@ -2,13 +2,12 @@ import React,{useState} from 'react'
 import './Contact.css'
 import home from './Home.jpg'
 
-function Contact() {
+function CommentsForm({addcomment}) {
 
   const [formData, setFormData] = useState({
     name:"",
-    email:"",
-    phonenumber:"",
-    message:"",
+    comment:""
+    
   })
 
   function handleChange(event){
@@ -24,6 +23,7 @@ function Contact() {
 
   const handleSubmit=(event) =>{
     event.preventDefault()
+    addcomment(formData)
     console.log(formData)
   }
 
@@ -47,27 +47,11 @@ function Contact() {
        value={formData.name}
       
        />
-      <input 
-      name="email"
-      type="text"
-      placeholder="email"
-      onChange={handleChange}
-       value={formData.email}
-    
-       />
-       <input 
-      name="phone number"
-      type="text"
-      placeholder="phone number"
-      onChange={handleChange}
-       value={formData.phonenumber}
-      
-       />
       <textarea 
-      name="message"
-      placeholder="Write your message here..." rows={10}
+      name="comment"
+      placeholder="Write your comment here..." rows={8}
       onChange={handleChange}
-      value={formData.message}
+      value={formData.comment}
     
        />
       <input className='btn' type="submit" value="Send" />
@@ -75,12 +59,9 @@ function Contact() {
     </div>
     </div>
 
-    <div className="Map" id="Map">
-            <iframe title="MapLink" className="MapLink" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19442.651250298743!2d13.321824!3d52.473135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7177f67d9c0767b4!2swild+caff%C3%A8!5e0!3m2!1sde!2sus!4v1543937031005" allowFullScreen></iframe>
-    </div>
    
 </>
   )
 }
 
-export default Contact
+export default CommentsForm

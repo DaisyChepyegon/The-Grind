@@ -7,13 +7,14 @@ import Pictures from "../Pictures";
 
 
 function Menu({menus}) {
+  
 
   return (
     <div className="menus">
       <div className="menu">
         <div className="ourmenu">
         <h2>Our Menu</h2>
-          {menus.map((item) =><List name={item.name} />)}
+          {menus.map((item) =><List name={item.name} key={item.id} />)}
         </div>
         <div className="best">
           <BestSellers menus={menus} />
@@ -22,7 +23,7 @@ function Menu({menus}) {
 
       <h1>Picture Collections</h1>
       <div className="slider">
-       {menus.map((item) =>  <Pictures image={item.image} />)}
+       {menus.map((item) =>  <Pictures image={item.image} key={item.id} />)}
       </div>
     </div>
   );

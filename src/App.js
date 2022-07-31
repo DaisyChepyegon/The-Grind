@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
+import CommentDisplay from "./components/Comments/CommentDisplay"
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import NavBar from "./components/Navigation/NavBar";
@@ -24,8 +24,11 @@ function App() {
     }))
   }
 
+ 
+
   useEffect(() => {
     fetchData()
+  
   },[])
 
   console.log(menus)
@@ -37,7 +40,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route exact path="/" element={<Home LoggedIn={LoggedIn} />} />
-          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/contact" element={<CommentDisplay  />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/favorites" element={<Favorites />} />
           <Route exact path="/menu" element={<Menu menus={menus} />} />
