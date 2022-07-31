@@ -7,6 +7,7 @@ export default function Navbar({setLoggedIn}) {
   function handleClick() {
     setLoggedIn(false);
     navigate("/login");
+    localStorage.clear()
   }
 
   return (

@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React,{useState} from "react";
 import {useNavigate} from "react-router-dom"
 import "./Login.css"
 import home from "./Home.jpg"
@@ -6,33 +6,33 @@ import home from "./Home.jpg"
 
 
 
-  function Login (setLoggedIn) {
+  function Login ({setLoggedIn}) {
   const [email, setEmail] =useState("")
   const [password, setPassword] =useState("")
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if(localStorage.getItem("user-info")){
-      navigate("/home")
-    }
-  },[])
+  const [account, setAccount] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("acc");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
   
  
   function handleSubmit(event) {
-    let item={password,email}
+     event.preventDefault();
+     console.log(account.email, email)
+    if(( email ===account.email) &&(password === account.password))
+    { 
+      setLoggedIn(true)
+      navigate("/")
 
-    event.preventDefault();
-    let result = fetch("http://localhost:3000/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(item),
-    })
-    setLoggedIn(true)
-    navigate("/home")
-
-      localStorage.setItem("user-info",JSON.stringify(result))
+      alert("Loggin SuccessFull")
+      return
+    }else{
+      alert("wrong email or password")
+    }
+ 
   }
 
   return (
@@ -44,17 +44,21 @@ import home from "./Home.jpg"
       
       <div className="login">
       <h1>Login</h1>
-       <form className="log">
+       <form onSubmit={handleSubmit} className="log">
         <label>Email </label>
         <input type="email" placeholder="Email"
+        required
+        value={email}
         onChange={e => setEmail( e.target.value)}
         />
         <label>Password</label>
         <input type="password" placeholder="Password"
+        required
+        value={password}
         onChange={e => setPassword( e.target.value)}
          />
       
-        <button onClick={handleSubmit}>Login</button>
+        <button>Login</button>
         </form>
       </div>
     </div>

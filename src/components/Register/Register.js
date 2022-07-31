@@ -3,25 +3,30 @@ import "./Register.css"
 import home from "./Home.jpg"
 
 
+
  function Register() {
    const [name, setName] =useState("")
+   const [acc, setAcc] =useState({})
    const [email, setEmail] =useState("")
    const [password, setPassword] =useState("")
+   const [formData, setFormData] =useState({
+    name:"",
+    email:"",
+    password:""
+   })
 
-  async function handleSubmit(){
-    let item={name,password,email}
-    console.warn(item)
 
-    let result= await fetch("http://localhost:3000/users",{
-      method:"POST",
-      body:JSON.stringify(item),
-      headers:{
-        "Content-Type":"application/json",
-        "Accept":"applicaion/json"
-      }
-    })
-    result= await result.json()
-    console.log("result",result)
+ function handleSubmit(e){
+  e.preventDefault()
+  setFormData( {
+    name:name,
+    email:email,
+    password:password
+  })
+  setAcc(formData)
+  console.log(formData)   
+  localStorage.setItem("acc", JSON.stringify(formData));
+
   }
 
   return (
@@ -33,24 +38,27 @@ import home from "./Home.jpg"
       </div>
       <div className="frm">
       <h1>Sign Up</h1>
-      <form className="sign">
+      <form onSubmit={handleSubmit} className="sign">
         
         <label> Name</label>
         <input type="text" placeholder="Name" 
           value={name}
+          required
           onChange={e => setName ( e.target.value)}
         />
         <label>Email </label>
         <input type="email" placeholder="Email"
           value={email}
+          required
           onChange={e => setEmail( e.target.value)}
         />
         <label>Password</label>
         <input type="password" placeholder="Password"
           value={password}
+          required
            onChange={e => setPassword( e.target.value)}
          />
-        <button onClick={handleSubmit}>Sign Up</button>
+        <button >Sign Up</button>
         </form>
         </div>
       </div>
